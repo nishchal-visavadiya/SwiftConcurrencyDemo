@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		24EB21672CBBEE5400EFAAF9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 24EB21662CBBEE5400EFAAF9 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		24EB212A2CBBCFE500EFAAF9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		24EB21192CBBCFE300EFAAF9 /* SwiftConcurrencyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrencyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EB21292CBBCFE500EFAAF9 /* SwiftConcurrencyDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftConcurrencyDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EB21332CBBCFE600EFAAF9 /* SwiftConcurrencyDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftConcurrencyDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24EB21502CBBD2B700EFAAF9 /* TraditionalConcurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraditionalConcurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -45,6 +50,11 @@
 			path = SwiftConcurrencyDemoUITests;
 			sourceTree = "<group>";
 		};
+		24EB21512CBBD2B700EFAAF9 /* TraditionalConcurrency */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TraditionalConcurrency;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24EB21672CBBEE5400EFAAF9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +80,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24EB214D2CBBD2B700EFAAF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +96,7 @@
 				24EB211B2CBBCFE300EFAAF9 /* SwiftConcurrencyDemo */,
 				24EB212C2CBBCFE600EFAAF9 /* SwiftConcurrencyDemoTests */,
 				24EB21362CBBCFE600EFAAF9 /* SwiftConcurrencyDemoUITests */,
+				24EB21512CBBD2B700EFAAF9 /* TraditionalConcurrency */,
 				24EB211A2CBBCFE300EFAAF9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +107,7 @@
 				24EB21192CBBCFE300EFAAF9 /* SwiftConcurrencyDemo.app */,
 				24EB21292CBBCFE500EFAAF9 /* SwiftConcurrencyDemoTests.xctest */,
 				24EB21332CBBCFE600EFAAF9 /* SwiftConcurrencyDemoUITests.xctest */,
+				24EB21502CBBD2B700EFAAF9 /* TraditionalConcurrency.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +132,7 @@
 			);
 			name = SwiftConcurrencyDemo;
 			packageProductDependencies = (
+				24EB21662CBBEE5400EFAAF9 /* Alamofire */,
 			);
 			productName = SwiftConcurrencyDemo;
 			productReference = 24EB21192CBBCFE300EFAAF9 /* SwiftConcurrencyDemo.app */;
@@ -163,6 +184,28 @@
 			productReference = 24EB21332CBBCFE600EFAAF9 /* SwiftConcurrencyDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		24EB214F2CBBD2B700EFAAF9 /* TraditionalConcurrency */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24EB215B2CBBD2B900EFAAF9 /* Build configuration list for PBXNativeTarget "TraditionalConcurrency" */;
+			buildPhases = (
+				24EB214C2CBBD2B700EFAAF9 /* Sources */,
+				24EB214D2CBBD2B700EFAAF9 /* Frameworks */,
+				24EB214E2CBBD2B700EFAAF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				24EB21512CBBD2B700EFAAF9 /* TraditionalConcurrency */,
+			);
+			name = TraditionalConcurrency;
+			packageProductDependencies = (
+			);
+			productName = TraditionalConcurrency;
+			productReference = 24EB21502CBBD2B700EFAAF9 /* TraditionalConcurrency.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +227,9 @@
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 24EB21182CBBCFE300EFAAF9;
 					};
+					24EB214F2CBBD2B700EFAAF9 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 				};
 			};
 			buildConfigurationList = 24EB21142CBBCFE300EFAAF9 /* Build configuration list for PBXProject "SwiftConcurrencyDemo" */;
@@ -195,6 +241,9 @@
 			);
 			mainGroup = 24EB21102CBBCFE300EFAAF9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				24EB21652CBBEE5400EFAAF9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 24EB211A2CBBCFE300EFAAF9 /* Products */;
 			projectDirPath = "";
@@ -203,6 +252,7 @@
 				24EB21182CBBCFE300EFAAF9 /* SwiftConcurrencyDemo */,
 				24EB21282CBBCFE500EFAAF9 /* SwiftConcurrencyDemoTests */,
 				24EB21322CBBCFE600EFAAF9 /* SwiftConcurrencyDemoUITests */,
+				24EB214F2CBBD2B700EFAAF9 /* TraditionalConcurrency */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +279,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24EB214E2CBBD2B700EFAAF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -247,6 +304,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		24EB212F2CBBCFE600EFAAF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24EB214C2CBBD2B700EFAAF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -514,6 +578,62 @@
 			};
 			name = Release;
 		};
+		24EB215C2CBBD2B900EFAAF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TraditionalConcurrency/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TraditionalConcurrency;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		24EB215D2CBBD2B900EFAAF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TraditionalConcurrency/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TraditionalConcurrency;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,7 +673,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		24EB215B2CBBD2B900EFAAF9 /* Build configuration list for PBXNativeTarget "TraditionalConcurrency" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24EB215C2CBBD2B900EFAAF9 /* Debug */,
+				24EB215D2CBBD2B900EFAAF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		24EB21652CBBEE5400EFAAF9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24EB21662CBBEE5400EFAAF9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24EB21652CBBEE5400EFAAF9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 24EB21112CBBCFE300EFAAF9 /* Project object */;
 }

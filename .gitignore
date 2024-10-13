@@ -1,0 +1,74 @@
+# Xcode
+DerivedData/
+.idea/
+xcuserdata/
+*.xcscmblueprint
+
+# Swift Package Manager
+.build/
+.swiftpm/xcode/package.xcworkspace/
+Packages/
+Package.pins
+Package.resolved
+
+# Build Products
+*.app
+*.app.dSYM
+*.ipa
+*.dSYM
+*.xcodeproj/project.xcworkspace/xcuserdata
+*.xcodeproj/project.xcworkspace/xcshareddata
+*.xcodeproj/project.xcworkspace/*.lock
+*.xcodeproj/xcuserdata
+
+# Logs
+*.log
+*.xcactivitylog
+
+# Temporary files
+*.tmp
+*.temp
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+Carthage/Checkouts/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# SwiftPM
+.swiftpm/
+.build/
+
+# Generated files
+*.plist
+*.xcconfig
+*.hmap
+
+# Dependency managers
+Carthage/
+Pods/
+
+# Ignore JetBrains IDEs
+.idea/
+*.iml
+
+# Env files
+.env
+
+# Xcode specific
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+*.mode2v3
+!default.mode1v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3

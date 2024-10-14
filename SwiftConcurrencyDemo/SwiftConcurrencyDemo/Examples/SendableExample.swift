@@ -1,13 +1,7 @@
-//
-//  SendableExample.swift
-//  SwiftConcurrencyDemo
-//
-//  Created by Nishchal Visavadiya on 13/10/24.
-//
 
 import SwiftUI
 
-struct User {
+class User {
     let id: Int
     let name: String
     
@@ -26,7 +20,7 @@ final class UserDataStore: Sendable {
     }
 }
 
-class UserProfileViewModel: ObservableObject, @unchecked Sendable {
+final class UserProfileViewModel: ObservableObject, Sendable {
     
     let userDataStore = UserDataStore()
     

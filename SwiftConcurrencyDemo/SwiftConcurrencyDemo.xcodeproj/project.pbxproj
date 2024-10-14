@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24EB21672CBBEE5400EFAAF9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 24EB21662CBBEE5400EFAAF9 /* Alamofire */; };
+		B14506052CC1BCCC008041F9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B14506042CC1BCCC008041F9 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24EB21672CBBEE5400EFAAF9 /* Alamofire in Frameworks */,
+				B14506052CC1BCCC008041F9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +132,7 @@
 			);
 			name = SwiftConcurrencyDemo;
 			packageProductDependencies = (
-				24EB21662CBBEE5400EFAAF9 /* Alamofire */,
+				B14506042CC1BCCC008041F9 /* Alamofire */,
 			);
 			productName = SwiftConcurrencyDemo;
 			productReference = 24EB21192CBBCFE300EFAAF9 /* SwiftConcurrencyDemo.app */;
@@ -242,7 +242,7 @@
 			mainGroup = 24EB21102CBBCFE300EFAAF9;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				24EB21652CBBEE5400EFAAF9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B14506032CC1BCCC008041F9 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 24EB211A2CBBCFE300EFAAF9 /* Products */;
@@ -462,6 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftConcurrencyDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -477,6 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftConcurrencyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -490,6 +492,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftConcurrencyDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -505,6 +508,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftConcurrencyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -685,20 +689,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		24EB21652CBBEE5400EFAAF9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		B14506032CC1BCCC008041F9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
 				kind = exactVersion;
-				version = 5.9.1;
+				version = 5.9.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		24EB21662CBBEE5400EFAAF9 /* Alamofire */ = {
+		B14506042CC1BCCC008041F9 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 24EB21652CBBEE5400EFAAF9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = B14506032CC1BCCC008041F9 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

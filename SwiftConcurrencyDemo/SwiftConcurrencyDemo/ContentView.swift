@@ -9,8 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @StateObject var viewModel = ViewModel()
+    
     var body: some View {
-        TaskExampleView()
+        Button("Example") {
+            viewModel.run()
+        }
     }
 }
 

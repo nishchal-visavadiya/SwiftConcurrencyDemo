@@ -1,30 +1,31 @@
-//
-//  LegacyAPIs.swift
-//  SwiftConcurrencyDemo
-//
-//  Created by Nishchal Visavadiya on 13/10/24.
-//
 
 import Foundation
-import Combine
 
 final class LegacyAPIs: Sendable {
     
-    func foo() {
+    func myOperation() {
         Task {
-            await operation()
+            do {
+                try await operation()
+            } catch {
+                print("Error: \(error)")
+            }
         }
     }
     
-    func operation() async {
+    func operation() async throws {
         print("Operation started")
-        let result = try? await getResultAsync()
-        print("Operation completed")
+        let result = try await getAPIResult()
+        print("Operation completed with value: \(result)")
     }
     
-    func getResultAsync() async throws -> Int {
+    func getAPIResult() async throws -> Int {
         return try await withCheckedThrowingContinuation { [weak self] continuation in
-            self?.getResult() { result in
+            guard let self else {
+                continuation.resume(returning: -1)
+                return
+            }
+            self.someLegacyAPI() { result in
                 switch result {
                 case .success(let success):
                     continuation.resume(returning: success)
@@ -35,14 +36,7 @@ final class LegacyAPIs: Sendable {
         }
     }
     
-    func getResult(completion: @escaping (Result<Int, Error>) -> Void) {
+    func someLegacyAPI(completion: @escaping (Result<Int, Error>) -> Void) {
         completion(.success(1))
-    }
-}
-
-extension Task {
-    
-    func store(in set: inout Set<AnyCancellable>) {
-        set.insert(AnyCancellable(cancel))
     }
 }

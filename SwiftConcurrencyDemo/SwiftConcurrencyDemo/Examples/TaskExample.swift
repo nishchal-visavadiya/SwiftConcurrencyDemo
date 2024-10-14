@@ -1,61 +1,63 @@
 
 import SwiftUI
-import Synchronization
 
-actor MyActor {
+final class TaskExample: ObservableObject, @unchecked Sendable {
     
-    private var preivousTask: Task<Int, any Error>?
-    
-    func doSomeWork(forId: Int, sleepForSeconds: Int) async throws -> Int {
-//        preivousTask = Task { [preivousTask] in
-//            let preiousValue = try await preivousTask?.value ?? 0
-//            
-//            return preiousValue
-//        }
-//        return try await preivousTask?.value ?? 0
-        
-        print("Task\(forId) started")
-        await waitFor(sleepForSeconds: sleepForSeconds)
-        print("Task\(forId) ended")
-        return forId
-    }
-    
-    func waitFor(sleepForSeconds: Int) async {
-        try? await Task.sleep(for: .seconds(sleepForSeconds))
-    }
-}
-
-final class SerialVsSequential: ObservableObject, Sendable {
-    
-    private let myActor = MyActor()
+    private var runningTask: Task<Int, Error>?
+    private var cancellables: Set<AnyCancellable> = []
     
     func run() {
-        print(Task.currentPriority.rawValue)
+        // MARK: Task and sub task
+        runningTask = Task {
+            print("Main Task")
+            await operation()
+            Task(priority: .background) {
+                print("Child task")
+            }
+            
+            if Bool.random() {
+                throw NSError(domain: "", code: 0)
+            } else {
+                return 0
+            }
+        }
+        runningTask?.cancel()
+        
+        // MARK: Task Priorities
         print(TaskPriority.userInitiated.rawValue)
         print(TaskPriority.high.rawValue)
         print(TaskPriority.medium.rawValue)
         print(TaskPriority.low.rawValue)
         print(TaskPriority.utility.rawValue)
         print(TaskPriority.background.rawValue)
-        Task { [weak self] in
-            try await self?.myActor.doSomeWork(forId: 1, sleepForSeconds: 3)
+        
+        // MARK: Detached Task
+        Task.detached { [weak self] in
+            for i in 1...10 {
+                try Task.checkCancellation()
+                print("Working for \(i)")
+                await self?.operation()
+            }
         }
-        Task { [weak self] in
-            try await self?.myActor.doSomeWork(forId: 2, sleepForSeconds: 2)
-        }
-        Task { [weak self] in
-            try await self?.myActor.doSomeWork(forId: 3, sleepForSeconds: 1)
-        }
+        .store(in: &cancellables)
+    }
+    
+    func operation() async {
+        try? await Task.sleep(for: .seconds(1))
+        print("Performing some operation!")
+    }
+    
+    deinit {
+        runningTask?.cancel()
+        print("Deinit")
     }
 }
 
-struct TaskExampleView: View {
+import Combine
+
+extension Task {
     
-    @StateObject var serialVsSequential = SerialVsSequential()
-    
-    var body: some View {
-        Button("Run") {
-            serialVsSequential.run()
-        }
+    func store(in set: inout Set<AnyCancellable>) {
+        set.insert(AnyCancellable(cancel))
     }
 }
